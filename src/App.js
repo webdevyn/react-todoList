@@ -1,16 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import ListItem from './ListItem';
 import { useState } from 'react';
 
 function App() {
-  const [tasks, setTasks] = useState([{id: 1, name: "Pizza"}, {id: 2, name: "Hamburger"}])    //tasks is the name of the array
+  const [tasks, setTasks] = useState([])    //tasks is the name of the array
 
   const [newItemName, setNewItemName] = useState("")
 
-  const listItems = tasks.map(function(item) {
-    return <ListItem key={item.id} itemName={item.name}/>
-  })
 
   const handleChange = (event) => {
     setNewItemName(event.target.value)  //updates state with what user types in
@@ -43,6 +39,19 @@ function App() {
   const clearList = () => {
     setTasks([])
   }
+
+  const removeTask = (id) => {
+    //get the tasks
+
+    //remove the task that was clicked
+    const updatedTasks= tasks.filter(task => task.id !== id)
+    //update the state with the new list of tasks
+    setTasks(updatedTasks)
+  }
+
+  const listItems = tasks.map(function(item) {
+    return <ListItem delete={()=> removeTask(item.id)} key={item.id} itemName={item.name}/>
+  })
 
   return (
     <div className="App">

@@ -1,5 +1,5 @@
-const ListItem = (props) => {
-    return <li>{props.itemName}</li>
+const ListItem = function(props){
+    return <li onClick={props.delete}>{props.itemName}</li>
 }
 
-export default ListItem;
+export default ListItem
