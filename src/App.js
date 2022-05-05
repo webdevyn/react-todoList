@@ -23,9 +23,14 @@ function App() {
     const newTask = {
       name: newItemName
     }
+    if (tasks.length === 0) {
+      newTask.id = 1
+    } else {
     //add an id to the object using setTasks, can't push to array
-    const lastItemId = tasks[tasks.length - 1].id    //our array is in numeric order
-    newTask.id = lastItemId + 1
+        const lastItemId = tasks[tasks.length - 1].id    //our array is in numeric order
+        newTask.id = lastItemId + 1
+    };
+  
     //make copy of current state
     const tasksCopy = [...tasks]   //spread operator makes copy of current array
     //add my object to the copy
