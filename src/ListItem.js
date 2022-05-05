@@ -1,5 +1,5 @@
-const ListItem = () => {
-    return <li>Hello</li>
+const ListItem = (props) => {
+    return <li>{props.itemName}</li>
 }
 
 export default ListItem;

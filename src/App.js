@@ -5,8 +5,7 @@ import ListItem from './ListItem';
 function App() {
   const data = [{id: 1, name: "Pizza"}, {id: 2, name: "Hamburger"}];
   const listItems = data.map(function(item) {
-    return <ListItem />;
-    // return<li key={item.id}>{item.name}</li>       //return jsx element for each li item
+    return <ListItem key={item.id} itemName={item.name}/>
   })
   return (
     <div className="App">
