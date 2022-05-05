@@ -42,7 +42,6 @@ function App() {
 
   const removeTask = (id) => {
     //get the tasks
-
     //remove the task that was clicked
     const updatedTasks= tasks.filter(task => task.id !== id)
     //update the state with the new list of tasks
@@ -51,6 +50,8 @@ function App() {
 
   const listItems = tasks.map(function(item) {
     return <ListItem delete={()=> removeTask(item.id)} key={item.id} itemName={item.name}/>
+    // return <ListItem delete={removeTask} id={item.id} key={item.id} itemName={item.name}/>
+
   })
 
   return (
