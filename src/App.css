@@ -2,8 +2,21 @@
   text-align: center;
 }
 
+#text {
+  margin: 5px;
+  border: 2px solid black;
+}
+
 ul {
-  list-style-type: none;
+  list-style: none;
+}
+
+li {
+  margin: 10px;
+}
+
+button {
+  margin-left: 5px;
 }
 
 li.completed {

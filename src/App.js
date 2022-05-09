@@ -3,7 +3,7 @@ import ListItem from './ListItem';
 import { useState } from 'react';
 
 function App() {
-  const [tasks, setTasks] = useState([])    //tasks is the name of the array
+  const [tasks, setTasks] = useState([])   //initial value of tasks is empty array
 
   const [newItemName, setNewItemName] = useState("")
 
@@ -23,7 +23,7 @@ function App() {
       newTask.id = 1
     } else {
     //add an id to the object using setTasks, can't push to array
-        const lastItemId = tasks[tasks.length - 1].id    //our array is in numeric order
+        const lastItemId = tasks[tasks.length - 1].id    //this works only if array is in numeric order
         newTask.id = lastItemId + 1
     };
   
@@ -54,24 +54,16 @@ function App() {
                  key={item.id} 
                  itemName={item.name}
                  />
-    // return <ListItem 
-                // delete={removeTask} 
-                // id={item.id} 
-                // key={item.id} 
-                // itemName={item.name}
-                // />
 
   })
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>To-Do List</h1>
+      <h2>Enter tasks in the field below:</h2>
       <form onSubmit={handleSubmit}>
-        <label>Name: 
-          <input onChange={handleChange} value={newItemName} type="text"/>
-        </label>
-        <input type="submit" value="submit"/>
+          <input id="text" onChange={handleChange} value={newItemName} type="text" placeholder="New Task"/>
+        <input type="submit" value="Add"/>
       </form>
       <ul>
         {listItems}

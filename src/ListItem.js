@@ -13,7 +13,6 @@ const ListItem = function(props){
             <button onClick={props.delete}> Delete </button>
         </li>
     )
-    // return <li onClick={() => props.delete(props.id)}>{props.itemName}</li>
 
 }
 
