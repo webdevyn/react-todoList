@@ -49,8 +49,17 @@ function App() {
   }
 
   const listItems = tasks.map(function(item) {
-    return <ListItem delete={()=> removeTask(item.id)} key={item.id} itemName={item.name}/>
-    // return <ListItem delete={removeTask} id={item.id} key={item.id} itemName={item.name}/>
+    return <ListItem
+                 delete={()=> removeTask(item.id)} 
+                 key={item.id} 
+                 itemName={item.name}
+                 />
+    // return <ListItem 
+                // delete={removeTask} 
+                // id={item.id} 
+                // key={item.id} 
+                // itemName={item.name}
+                // />
 
   })
 
@@ -59,7 +68,9 @@ function App() {
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
       <form onSubmit={handleSubmit}>
-        <label>Name: <input onChange={handleChange} value={newItemName} type="text"/></label>
+        <label>Name: 
+          <input onChange={handleChange} value={newItemName} type="text"/>
+        </label>
         <input type="submit" value="submit"/>
       </form>
       <ul>
