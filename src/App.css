@@ -20,6 +20,7 @@ li {
 input {
   font-size: 20px;
   color: black;
+
 }
 
 button {
@@ -33,4 +34,11 @@ button {
 
 li.completed {
   text-decoration: line-through;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
