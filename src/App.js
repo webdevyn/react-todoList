@@ -63,7 +63,7 @@ function App() {
       <h2>Enter tasks in the field below:</h2>
       <form onSubmit={handleSubmit}>
           <input id="text" onChange={handleChange} value={newItemName} type="text" placeholder="New Task"/>
-        <input disabled={!newItemName} type="submit" value="Add"/>
+        <input type="submit" disabled={!newItemName} value="Add"/>
       </form>
       <ul>
         {listItems}

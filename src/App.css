@@ -13,11 +13,22 @@ ul {
 }
 
 li {
-  margin: 10px;
+  margin: 15px;
+  font-size: 20px;
+}
+
+input {
+  font-size: 20px;
+  color: black;
 }
 
 button {
+  color: black;
+  font-size: 20px;
   margin-left: 5px;
+}
+#delete {
+  margin-left: 10px;
 }
 
 li.completed {

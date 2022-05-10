@@ -10,7 +10,7 @@ const ListItem = function(props){
     return (
         <li className={completed === true ? "completed" : ""} onClick={markItemComplete}>
             {props.itemName}
-            <button onClick={props.delete}> Delete </button>
+            <button id="delete" onClick={props.delete}> Delete </button>
         </li>
     )
 
