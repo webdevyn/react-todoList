@@ -3,6 +3,12 @@
   color: black;
 }
 
+h1 {
+  background-color: turquoise;
+  width: 45%;
+  margin: 0 auto;
+}
+
 #text {
   margin: 5px;
   border: 2px solid black;
@@ -15,12 +21,13 @@ ul {
 li {
   margin: 15px;
   font-size: 20px;
+  background-color: white;
+  cursor: pointer;
 }
 
 input {
   font-size: 20px;
   color: black;
-
 }
 
 button {
@@ -28,17 +35,16 @@ button {
   font-size: 20px;
   margin-left: 5px;
 }
+
 #delete {
-  margin-left: 10px;
+  margin-left: 25px;
+  font-size: 15px;
 }
 
 li.completed {
   text-decoration: line-through;
 }
 
-input[type="text"],
-input[type="submit"],
-input[type="button"] {
-  -webkit-appearance: none;
-  border-radius: 0;
+#clear {
+  margin-top: 40px;
 }

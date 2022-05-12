@@ -2,6 +2,7 @@ import './App.css';
 import ListItem from './ListItem';
 import { useState } from 'react';
 
+
 function App() {
   const [tasks, setTasks] = useState([])   //initial value of tasks is empty array
 
@@ -68,7 +69,7 @@ function App() {
       <ul>
         {listItems}
       </ul>
-      <button onClick={clearList}>Clear List</button>
+      <button id="clear" onClick={clearList}>Clear List</button>
     </div>
   );
 }
